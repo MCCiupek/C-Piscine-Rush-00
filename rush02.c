@@ -6,7 +6,7 @@
 /*   By: mciupek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:03:17 by mciupek           #+#    #+#             */
-/*   Updated: 2019/06/08 12:17:52 by mciupek          ###   ########.fr       */
+/*   Updated: 2019/06/08 12:31:19 by mciupek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	print_l(int l, char a, char b)
 	int i;
 
 	i = l;
-	while (i != 0)
+	while (i > 0)
 	{
 		if (i == l || i == 1)
 			write(1, &a, 1);
@@ -33,7 +33,7 @@ void	rush02(int l, int h)
 	int i;
 
 	i = h;
-	while (i != 0)
+	while (i > 0)
 	{
 		if (i == h)
 			print_l(l, 'A', 'B');
