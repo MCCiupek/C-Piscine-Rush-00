@@ -6,11 +6,13 @@
 /*   By: mciupek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:03:17 by mciupek           #+#    #+#             */
-/*   Updated: 2019/06/08 12:31:19 by mciupek          ###   ########.fr       */
+/*   Updated: 2019/06/08 16:15:00 by haguerni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	print_l(int l, char a, char b)
 {
@@ -20,15 +22,15 @@ void	print_l(int l, char a, char b)
 	while (i > 0)
 	{
 		if (i == l || i == 1)
-			write(1, &a, 1);
+			ft_putchar(a);
 		else
-			write(1, &b, 1);
+			ft_putchar(b);
 		i--;
 	}
 	write(1, "\n", 1);
 }
 
-void	rush02(int l, int h)
+void	rush(int l, int h)
 {
 	int i;
 
@@ -43,9 +45,4 @@ void	rush02(int l, int h)
 			print_l(l, 'B', ' ');
 		i--;
 	}
-}
-
-int		main(void)
-{
-	rush02(4, 4);
 }
